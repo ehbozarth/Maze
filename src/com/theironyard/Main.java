@@ -88,6 +88,7 @@ public class Main {
                 for(Room tempRoom : tempRooms) {
                     if (tempRoom.isEnd) {
                         tempEnd = true;
+                        break;
                     }
                 }
             }
@@ -125,10 +126,11 @@ public class Main {
                     if(room.isStart){
                         s1 = "o";
                     }
-                    String s2 = room.hasRight ? "|" : " ";
-                    if(room.isEnd){
-                        s1 = "x";
+                    else if(room.isEnd){
+                    s1 = "x";
                     }
+                    String s2 = room.hasRight ? "|" : " ";
+
                     System.out.print(s1 + s2);
                 }
             System.out.println();
